@@ -1,38 +1,1083 @@
-.App {
+* {
+  box-sizing: border-box;
+  /* font-family: 'Ubuntu', sans-serif; */
+  /* font-family: 'Teko', sans-serif; */
+  /* font-family: 'Cabin', sans-serif; */
+  /* font-family: 'Turret Road', cursive; */
+  /* font-family: 'Orbitron', sans-serif; */
+  /* font-family: 'Cabin', sans-serif;  */
+  /* font-family: 'Orbitron', sans-serif; */
+  /* font-family: 'Teko', sans-serif; */
+  /* font-family: 'Turret Road', cursive; */
+  /* font-family: 'Share Tech Mono', monospace;  */
+  font-family: 'Overpass Mono', monospace;
+  /* font-family: 'Roboto Mono', monospace; */
+}
+
+:root {
+  --light-green: #54857d;
+  --dark-green: #36605a;
+  --seedNum: #4e7d75;
+
+}
+/* :root {
+  --light-green: rgb(25, 65, 129);
+  --dark-green: rgb(8, 32, 70);
+  --seedNum: rgb(25, 65, 129);
+} */
+
+body {
+  margin: 0;
+  font-size: 17px;
+  background-color: #050506;
+  /* background: #b4bac3; */
+  background: #e4e6e4;
+  /* background-image: url("https://i.imgur.com/nfgP4Dh.jpg"); */
+  /* background-image: url("https://i.imgur.com/K7C32Aj.jpg"); */
+  background-size: cover;
+
+}
+
+.main {
+  /* margin-left: 160px; Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+  /* display: block; */
+  align-content: center;
+}
+
+#myVideo {
+  position: fixed;
+  /* right: 0; */
+  left: 150px;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  opacity: 0.9;
+  margin-left: 10px;
+}
+
+.content {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  /* background: #d8dbce; */
+  background: #425c59;
+  background-image: url("https://i.imgur.com/M06xwDV.jpg");
+  background-size:cover;
+  /* background: #031615; */
+  /* opacity: 0.95; */
+  color: #ffffff;
+  width: 400px;
+  height: 945px;
+  padding-right: 20px;
+  padding-left: 15px;
+  /* padding-top: 20px;
+  padding-bottom: 20px; */
+  text-align: left;
+  /* border: solid 4px; */
+  /* border-color: #1e1d24; */
+  border-radius: 10px;
+  /* border-color: transparent; */
+  /* margin-right:100px; */
+
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+  /* margin: 5px; */
+}
+
+.lowerContainer{
+  /* background-color: white; */
+  height: 550px;
+  border-radius: 3px;
+  margin-top: 10px;
+  padding:8px;
+
+}
+
+#myBtn {
+  width: 170px;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  background: #ffffff;
+  color: #031615;
+  cursor: pointer;
+  outline: none;
+  margin-bottom: 30px;
+  transition-duration: 0.2s;
+}
+
+#myBtnLogin {
+  width: 170px;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  background: #e6b02d;
+  color: #031615;
+  cursor: pointer;
+  outline: none;
+  margin-bottom: 30px;
+  transition-duration: 0.2s;
+}
+
+#myBtn:hover {
+  background: #e6b02d;
+  color: #031615;
+}
+
+form{
+  display:flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: left;
+}
+
+h1.sidebar{
+  color:white;
+  line-height: 40px;
+  font-size: 34px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+div.sidebar{
+  background-image: url("https://i.imgur.com/m5rxRlG.png");
+  background-size: cover;
+  width: 100%;
+  height:150px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  background: transparent;
+  /* background: #315a54; */
+  color: white;
+  width: 100%;
+  padding: 6px 20px;
+  padding-left: 0;
+  margin: 8px 0;
+  margin-bottom: 16px;
+  display: inline-block;
+  border: none;
+  box-sizing: border-box;
+  font-size: 20px;
+  outline:none;
+  border-bottom: solid 1px;
+}
+input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: .2;
+  /* opacity: 1; Firefox */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.shuffleLabel{
+  font-size: 15px;
+  margin-top: 2px;
+}
+
+.shuffle{
+  background-image: url("https://i.imgur.com/YAyxZKe.png");
+  background-size: cover;
+  /* background-color:red; */
+  padding-bottom: 2px  ;
+  margin-left: 3px;
+  height: 19px;
+  width: 23px;
+}
+.shuffleOn{
+  background-image: url("https://i.imgur.com/KhdNlGL.png");
+  background-size: cover;
+  /* background-color:red; */
+  padding-bottom: 2px  ;
+  margin-left: 3px;
+  height: 19px;
+  width: 23px;
+}
+/* .shuffle:hover{
+  background-image: url("https://i.imgur.com/KhdNlGL.png");
+} */
+.shuffle:active{
+  background-image: url("https://i.imgur.com/YAyxZKe.png");
+}
+/* .shuffleOn:hover{
+  background-image: url("https://i.imgur.com/YAyxZKe.png");
+} */
+.shuffleOn:active{
+  background-image: url("https://i.imgur.com/YAyxZKe.png");
+}
+
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.name{
+  color: white;
+  overflow-wrap: break-word;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.container {
   display: flex;
-  flex-direction: column;
+  color:white;
+  flex-direction: row;
+  align-items: center; 
+  justify-content: space-around;
+  width: 165px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* margin */
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  /* position: absolute; */
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  border:solid 1px rgb(255, 255, 255);
+  position: relative;
+  /* top: 0;
+  left: 0; */
+  height: 20px;
+  width: 20px;
+  /* background-color: rgb(221, 221, 221); */
+  border-radius: 2px;
+  margin-right: 8px;
+}
+
+/* On mouse-over */
+.container:active input ~ .checkmark {
+  /* background-color: white; */
+}
+
+/* When the checkbox is checked */
+.container input:checked ~ .checkmark {
+  /* background-color: white; */
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 7px;
+  top: 4px;
+  width: 3px;
+  height: 8px;
+  border: solid #e6b02d;
+  border-width: 0 1px 1px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.SeedContainer {
+  /* background: #577270; */
+  /* margin-top: 30px; */
+  /* direction: rtl; */
+  overflow-y:auto;
+  /* overflow-y:scroll; */
+  height:610px;
+  padding: 13px;
+  padding-bottom:5px;
+  margin-top: 30px;
+  /* border-bottom:solid 1px rgb(240, 240, 240); */
+  box-shadow: inset 0 0 5px 0px rgba(44, 61, 59, .7);
+  border-radius: 3px;
+  /* padding-bottom: 2px; */
+
+
+}
+
+.SeedContainerGreenLight {
+  background: #777676;
+  /* margin-top: 30px; */
+  /* direction: rtl; */
+  overflow-y:auto;
+  /* overflow-y:scroll; */
+  height:100%;
+  padding: 8px;
+  margin-top: 30px;
+  /* border:solid 1px rgb(240, 240, 240); */
+
+  /* border-radius: 3px; */
+
+}
+
+/* width */
+::-webkit-scrollbar {
+  /* display:none; */
+  width: 4px;
+  height: 0px;
+  border-radius:5px;
+}
+
+::web
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(243, 243, 243);; 
+  border-radius:5px;
+
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e6b02d;
+  border-radius:5px;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #e6b02d; 
+}
+
+.Seed {
+  /* direction:ltr; */
+  /* background: #3f3f3f;
+  background: rgb(87, 87, 87); */
+  background: #5e7573;
+
+  color:white;
+  font-size: 16px;
+  /* font-weight: 700; */
+  margin-bottom:6px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  padding:16px;
+  padding-right: 10px;
+  padding-left: 0px;
+  justify-content: space-between;
+  border-radius: 3px;
+  box-shadow: inset 0 0 5px 0px rgba(44, 61, 59, 0.3);
+}
+
+.seedNum {
+  color: #324241;
+  background: #546968;
+  height: 32px;
+  width: 32px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  font-weight: 400;
+
+}
+
+#deleteSeed{
+  cursor: pointer;
+  margin-left: 10px;
+  opacity: 0.5;
+}
+#deleteSeed:hover{
+  opacity: 1;
+}
+
+
+.seedForm{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#myPlusBtn{
+  background: #425c59;
+  color: white;
+  margin-left: 5px;
+  /* padding: 6px; */
+  height: 35px;
+  width: 35px;
+  font-size: 26px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline:none;
+  border: 0px;
+  border-radius: 10px;
+}
+#myPlusBtn:active, #myPlusBtn:hover{
+  /* background-color: #c39425; */
+  color: #e6b02d;
+}
+
+input.editSeedForm{
+  background: #5e7573;
+  font-size: 16px;
+  /* width: 100px; */
+  width: auto;
+  margin: 0px;
+  margin-right: 20px;
+  padding:0;
+  padding-left: 10px;
+  border:none;
+}
+
+input.editSeedForm::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #b2c7c4;
+  /* opacity: 1; Firefox */
+}
+
+form.seedEditForm{
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+input.editIconWhite{
+  outline: 0;
+}
+
+div.checkbox-and-button{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: space-between; */
+  margin-bottom: 15px;
+  color: black;
+  width:80%;
+  /* padding-right:60px; */
+}
+
+button.generateBtn{
+  background-color: #e6b02d;
+  color: #ffffff;
+  /* height: 20px; */
+  /* width: 55px; */
+  padding:4px 12px;
+  padding-top:5px;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline:none;
+  border: 0px;
+  /* border-radius: 3px; */
+  /* margin-right: 20px; */
+  border-radius: 50px;
+  /* box-shadow: inset 0 0 2px 0px rgba(44, 61, 59, 0.3); */
+  /* box-shadow: inset 0 0 5px 0px rgba(44, 61, 59, .7); */
+  margin-right: 20px;
+}
+
+button.generateBtnGreenLight{
+  background-color: #e6b02d;
+  color: #000000;
+  /* height: 20px; */
+  /* width: 55px; */
+  padding:4px 12px;
+  padding-top:5px;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline:none;
+  border: 0px;
+  margin-right: 20px;
+  /* border-radius: 3px; */
+  /* margin-right: 20px; */
+  border-radius: 50px;
+  /* box-shadow: inset 0 0 5px 0px rgba(44, 61, 59, .7); */
+  /* box-shadow:  0px 3px 0px 0px rgb(192, 145, 36); */
+
+
+}
+button.generateBtn:active{
+  background-color: rgb(192, 145, 36);
+  box-shadow: inset 0 0 3px 0px rgba(44, 61, 59, 1);
+}
+
+button.generateBtnGreenLight:active{
+  background-color: rgb(192, 145, 36);
+  box-shadow: inset 0 0 3px 0px rgba(44, 61, 59, 1);
+}
+
+h1 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.bracket{
+  position: absolute;
+  left: 420px;
+  top: 9px;
+  /* overflow-y:auto; */
+  background-color: rgb(243, 243, 243);
+  padding:30px;
+  padding-top:20px;
+  border-radius:10px;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  /* box-shadow: 0 0 10px 0 rgba(0,0,0,.3); */
+  box-shadow: inset 0 0 5px 0px rgba(44, 61, 59, .4);
+
+
+}
+
+.Pair{
+  font-size: 10px;
+  /* background-color: var(--light-green); */
+}
+
+.Player{
+  background-color: #f1f1f1;
+  font-size: 16px;
+  /* color: #24413c; */
+  width: 200px;
+  height: 32px;
+  /* padding: 10px; */
+  display: flex;
+  align-items: center;
+  margin:5px;
+  margin-bottom: 30px;
+  margin-right:50px;
+  /* justify-content: space-between; */
+  /* border:solid 1px #637573; */
+  border-radius: 3px;
+  box-shadow: inset 0 0 5px 0px rgba(44, 61, 59, .3);
+}
+
+.PlayerGold{
+  background-color: #e6b02d;
+  font-size: 16px;
+  /* color: #24413c; */
+  width: 200px;
+  height: 32px;
+  /* padding: 10px; */
+  display: flex;
+  align-items: center;
+  margin:5px;
+  margin-bottom: 30px;
+  /* justify-content: space-between; */
+  /* border:solid 1px #637573; */
+  /* border:solid 1px; */
+  border-radius: 3px;
+}
+
+.PlayerLocked{
+  background-color: #f1f1f1;
+  font-size: 16px;
+  color: rgb(155, 152, 152);
+  width: 200px;
+  height: 32px;
+  /* padding: 10px; */
+  display: flex;
+  align-items: center;
+  margin:5px;
+  margin-bottom: 30px;
+  /* justify-content: space-between; */
+  /* border:solid 1px; */
+  border:solid 1px #dfdfdf;
+  border-radius: 3px;
+}
+
+.PlayerGold#top{
+  /* border-bottom: solid 1px; 
+  border-color: white; */
+  margin-bottom: 4px;
+}
+
+.PlayerLocked#top{
+  /* border-bottom: solid 1px; 
+  border-color: white; */
+  margin-bottom: 4px;
+}
+
+.Player#top{
+  /* border-bottom: solid 1px; 
+  border-color: white; */
+  margin-bottom: 4px;
+}
+.Player#bottom{
+  /* border-top: solid 1px; 
+  border-color: white; */
+}
+
+.Player:hover{
+  /* transition-duration: 0.4s; */
+  background-color: #e6b02d;
+}
+.Player:hover > div{
+  /* transition-duration: 0.4s; */
+
+  /* background-color: #e6b02d; */
+}
+
+.Player:active{
+  /* transition-duration: 0.4s; */
+
+  background-color: #f8ca60;
+}
+/* .Player:active > div{
+  /* transition-duration: 0.4s; */
+
+  /* background-color: #f8ca60; */
+/* } */ 
+
+.playerNotInteractive {
+  background-color: #f1f1f1;
+  font-size: 16px;
+  color: #24413c;
+  width: 200px;
+  height: 32px;
+  /* padding: 10px; */
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  /* justify-content: space-between; */
+  /* border:solid 1px; */
+  border-radius: 3px;
+}
+.playerNotInteractive#top{
+  /* border-bottom: solid 1px; 
+  border-color: white; */
+  margin-bottom: 4px;
+}
+.playerNotInteractive#bottom{
+  /* border-top: solid 1px; 
+  border-color: white; */
+}
+
+.bracketSeedNum {
+  /* color: #24413c; */
+  background-color: #cecece;
+  height: 32px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* border-top:solid 1px #637573; */
+  /* border-bottom:solid 1px #637573; */
+
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+.bracketSeedName {
+  margin-left: 10px;
+  /* color: #24413c; */
+}
+
+.columnHeader {
+  /* color: #24413c; */
+  /* background-color: #425c59; */
+  color: #425c59;
+  width: 200px;
+  font-size: 14px;
+  /* font-weight: bold; */
+  border-bottom: solid 1px;
+  border-color: rgb(133, 133, 133);
+  margin-bottom: 30px;
+  margin-left:5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  /* padding-left: 7px; */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  /* position: fixed; */
+  font-weight: 700;
+}
+
+.Bracket{
+  display:flex;
+  flex-direction: row;
+  overflow-y:auto;
+  /* overflow-x:scroll; */
+  /* height: 50%; */
+  padding-right: 30px;
+  height: 894px;
+  /* border-bottom: solid 1px; */
+  /* border-color: #24413c; */
+  /* margin-right: 50px; */
+  width: 1219px;
+  /* height: 100%; */
+  /* background-color:red; */
+  border-radius:10px;
+
+}
+
+#bracketColumn{
+  /* display:flex; */
+  margin-right:28px;
+  width: 200px;
+  /* height: 685px; */
+}
+
+ .pairContainer{
+   /* height: 784px; */
+  /* margin-top: 10px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* position: fixed; */
+ }
+
+ .firstPairContainer{
+   /* find a way to grab whatever the height is of this */
+   /* height: 30px; */
+ /* margin-top: 10px; */
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ /* position: fixed; */
+}
+
+.BracketIndexPage{
+  position: absolute;
+  left: 420px;
+  /* top: 20px; */
+  color: white;
+  height: 685px;
+  overflow-y: auto;
+  border-radius: 10px;
+}
+
+/* The Modal (background) */
+.modal {
+  /* display: none; Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 21%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal:hover{
+  cursor: pointer;
+}
+
+/* Modal Content */
+#object {
+  background-color: #fefefe;
+  background-image: url('https://i.imgur.com/CYOpIrY.jpg');
+  background-size: 100% 120%;
+  margin: auto;
+  /* padding: 20px; */
+  padding-right: 12px;
+  padding-left: 15px;
+  border: 1px solid #888;
+  width: 40%;
+  max-width: 500px;
+  text-align: center;
+  font-weight: 300;
+  visibility: hidden;
+  border-radius: 3px;
+}
+
+#object:hover{
+  cursor: pointer;
+}
+
+.message {
+  margin:50px;
+  font-size: 26px;
+  /* font-weight: bold; */
+  border-bottom: solid 2px;
+  border-color: #e6b02d;
+}
+
+.closeContainer{
+  width:100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+/* The Close Button */
+.close {
+  color: rgb(95, 94, 94);
+  float: right;
+  font-size: 34px;
+  font-weight: 300;
+  margin: 15px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0px;
+}
+
+.close:hover,
+.close:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.Signup{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:300px;
+  /* height: 500px; */
+  /* margin-left: 5%; */
+  color:white;
+  margin: auto;
+  /* background-color:red; */
+  /* background-image:(url("http://bit.ly/2gPLxZ4")) */
+}
+
+input.welcomeInput{
+  background-color:transparent;
+  border: none;
+  color: white;
+  width: 300px;
+  padding: 6px 20px;
+  padding-left: 0;
+  margin: 8px 0;
+  margin-bottom: 16px;
+  display: inline-block;
+  border: 0px;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 300;
+  outline:none;
+  border-bottom: solid 1px;
+  transition-duration: 0.4s;
+}
+
+input.welcomeInput::placeholder{
+  color: white;
+  opacity: .2;
+  font-weight: 300;
+}
+
+input.welcomeInput:focus{
+  font-size: 30px;
+}
+
+.signup{
+  font-family: 'Overpass Mono', monospace;
+  font-weight: 300;
+  color: white;
+  font-size: 40px;
+  margin-bottom: 0;
+  margin-top: 260px;
+}
+
+.signupForm{
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  font-weight: 300;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+li a:hover:not(.active) {
+  /* background-color: rgb(241, 241, 241); */
+  color: #e6b02d
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.active {
+  background-color: transparent;
 }
+
+.Welcome{
+  /* float:center; */
+  text-align:center;
+  display:flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items:center;
+}
+
+h1.welcome{
+  font-family: 'Overpass Mono', monospace;
+  color: white;
+  font-size: 80px;
+  margin-top: 0;
+  line-height: 100px;;
+  font-weight: 700;
+  /* border-bottom: solid 7px; */
+  /* border-color: var(--light-green); */
+  padding-bottom: 5px;
+  /* margin-bottom: 20px; */
+
+}
+.line{
+  width:495px;
+  height: 2px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+#welcomeVideo {
+  position: fixed;
+  z-index: -3;
+  left: 0px;
+  top: 0px;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  /* border-radius: 15px; */
+
+  /* width: 100px;
+  height: 200px; */
+  min-width: 100%;  
+  min-height: 100%;
+  /* opacity: 0.9; */
+}
+
+.blackOverlay{
+  position: fixed;
+  z-index:-1;
+  left: 0px;
+  top: 0px;
+  background-color:black;
+  min-width: 100%;  
+  min-height: 100%;
+  opacity: 0.2;
+}
+
+.graphicOverlay{
+  /* background: url('https://i.imgur.com/WP3AUMf.gif'); */
+  background: url('https://i.imgur.com/pwxjakl.gif');
+  position: fixed;
+  z-index:-2;
+  left:-150px;
+  top: -130px;
+  min-width: 110%;  
+  min-height: 150%;
+  opacity: .2;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.graphicOverlayNotHome{
+  background: url('https://i.imgur.com/WP3AUMf.gif');
+  position: fixed;
+  z-index:-2;
+  left:-150px;
+  top: -130px;
+  min-width: 110%;  
+  min-height: 150%;
+  opacity: .2;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+
+.welcome_to{
+  font-family: 'Overpass Mono', monospace;
+  font-weight: 300;
+  color: white;
+  font-size: 40px;
+  margin-bottom: 0;
+  margin-top: 190px;
+}
+.welcomeButtons{
+display: flex;
+/* background-color:red; */
+justify-content: center;
+/* width: 500px; */
+}
+
+.welcomeBtn{
+  background-color: #e6b02d;
+  color: #ffffff;
+  padding:5px 15px;
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline:none;
+  border: 0px;
+  width: 170px;
+  margin: 20px;
+  margin-top: 15px;
+  border-radius: 60px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition-duration: 0.2s;
+}
+
+.welcomeBtn:hover{
+  background-color: #c39425;
+}
+
+.welcomeBtn:active{
+  background-color: white;
+  color: #c39425;
+}
+
+.logo{
+  width:10%;
+}
+
